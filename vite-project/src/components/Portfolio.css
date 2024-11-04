@@ -1,0 +1,35 @@
+/* Portfolio.css */
+.portfolio-container {
+    padding: 2rem;
+    text-align: center; /* Center the text in the container */
+  }
+  
+  .portfolio-header {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .portfolio-grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 1rem; /* Space between items */
+  }
+  
+  .portfolio-item {
+    background: rgba(255, 255, 255, 0.8); /* Light background with some opacity */
+    border: 1px solid #ccc; /* Optional border */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+    text-align: center; /* Center the text */
+  }
+  
+  .portfolio-item img {
+    width: 100%; /* Full width for the image */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure it behaves like a block element */
+  }
+  
+  .portfolio-item h3 {
+    margin: 0.5rem 0; /* Space above and below the title */
+  }
+  
