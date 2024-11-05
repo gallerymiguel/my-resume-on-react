@@ -6,6 +6,7 @@ import About from './components/About'; // Your existing About Me/Home component
 import Portfolio from './components/Portfolio'; // Your Portfolio component
 import Contact from './components/Contact'; // Placeholder Contact component
 import Resume from './components/Resume'; // Placeholder Resume component
+import Footer from './components/Footer'; // Import the Footer component
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/resume" element={<Resume />} />
       </Routes>
+      <Footer /> {/* Include the Footer component here */}
     </Router>
   );
 }

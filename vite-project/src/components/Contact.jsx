@@ -1,17 +1,34 @@
 import React, { useState } from 'react';
-import './Contact.css'; // Create this file for styling
+import './Contact.css';
 
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you can log the values to console or perform any action
-    console.log('Submitted:', { name, email, message });
+
+    // Validate email
+    if (!email) {
+      setError('Email is required');
+      return;
+    }
+
+    // Add more email validation if needed (e.g., regex)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!email || !emailRegex.test(email)) {
+      setError('Please enter a valid email address');
+      return;
+    }
     
-    // Clear the form after submission
+    // Clear error and handle form submission (for now just log)
+    setError('');
+    console.log({ name, email, message });
+
+    // Reset form fields
     setName('');
     setEmail('');
     setMessage('');
@@ -22,36 +39,34 @@ const Contact = () => {
       <h2>Contact Me</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="name">Name:</label>
+          <label>Name:</label>
           <input
             type="text"
-            id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
           />
         </div>
         <div className="form-group">
-          <label htmlFor="email">Email:</label>
+          <label>Email:</label>
           <input
             type="email"
-            id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
+          {error && <span className="error">{error}</span>}
         </div>
         <div className="form-group">
-          <label htmlFor="message">Message:</label>
+          <label>Message:</label>
           <textarea
-            id="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
-          />
+          ></textarea>
         </div>
         <button type="submit" className="contact-submit-button">Submit</button>
-        </form>
+      </form>
     </section>
   );
 };

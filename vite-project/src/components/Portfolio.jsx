@@ -7,10 +7,12 @@ import './Portfolio.css'; // Ensure you have this for styling
 const Portfolio = () => {
   const projects = [
     { id: 1, title: 'OpenAI-Weatherforecast', image: '/OpenAi.jpg', github: 'https://github.com/gallerymiguel/OpenAI-Weatherforecast' },
-    { id: 2, title: 'Readme Generator', image: '/markdown.jpg', github: 'https://github.com/username/Readme-Generator' },
-    { id: 3, title: 'Vehicle Builder CLI', image: '/Vehicle.jpg', github: 'https://github.com/username/Vehicle-Builder-CLI' },
-    { id: 4, title: 'Employee Manager PSQL-CLI', image: '/SQL.jpg', github: 'https://github.com/username/Employee-Manager-PSQL' },
-    { id: 5, title: 'Temperature Converter', image: '/temperature.jpg', github: 'https://github.com/username/Temperature-Converter' },
+    { id: 2, title: 'Readme Generator', image: '/markdown.jpg', github: 'https://github.com/gallerymiguel/readme-generator' },
+    { id: 3, title: 'Vehicle Builder CLI', image: '/Vehicle.jpg', github: 'https://github.com/gallerymiguel/Vehicle-Builder-CLI' },
+    { id: 4, title: 'Employee Manager PSQL-CLI', image: '/SQL.jpg', github: 'https://github.com/gallerymiguel/Employee-Manager-CLI' },
+    { id: 5, title: 'Temperature Converter', image: '/temperature.jpg', github: 'https://github.com/CelestialChai/temperature_converter' },
+    { id: 6, title: 'Weather App API', image: '/WeatherAPI', github: 'https://github.com/gallerymiguel/Weather-App-Challenge' },
+
   ];
 
   return (
