@@ -1,15 +1,16 @@
 // src/components/Portfolio.jsx
 import React from 'react';
-import './Portfolio.css'; // Create this file for styling
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import './Portfolio.css'; // Ensure you have this for styling
 
 const Portfolio = () => {
   const projects = [
-    { id: 1, title: 'Project 1', image: '/path-to-image1.jpg' },
-    { id: 2, title: 'Project 2', image: '/path-to-image2.jpg' },
-    { id: 3, title: 'Project 3', image: '/path-to-image3.jpg' },
-    { id: 4, title: 'Project 4', image: '/path-to-image4.jpg' },
-    { id: 5, title: 'Project 5', image: '/path-to-image5.jpg' },
-    { id: 6, title: 'Project 6', image: '/path-to-image6.jpg' },
+    { id: 1, title: 'OpenAI-Weatherforecast', image: '/OpenAi.jpg', github: 'https://github.com/gallerymiguel/OpenAI-Weatherforecast' },
+    { id: 2, title: 'Readme Generator', image: '/markdown.jpg', github: 'https://github.com/username/Readme-Generator' },
+    { id: 3, title: 'Vehicle Builder CLI', image: '/Vehicle.jpg', github: 'https://github.com/username/Vehicle-Builder-CLI' },
+    { id: 4, title: 'Employee Manager PSQL-CLI', image: '/SQL.jpg', github: 'https://github.com/username/Employee-Manager-PSQL' },
+    { id: 5, title: 'Temperature Converter', image: '/temperature.jpg', github: 'https://github.com/username/Temperature-Converter' },
   ];
 
   return (
@@ -19,7 +20,10 @@ const Portfolio = () => {
         {projects.map((project) => (
           <div key={project.id} className="portfolio-item">
             <img src={project.image} alt={project.title} />
-            <h3>{project.title}</h3>
+            <h6>{project.title}</h6>
+            <a href={project.github} target="_blank" rel="noopener noreferrer" className="github-link">
+              <FontAwesomeIcon icon={faGithub} size="3x" />
+            </a>
           </div>
         ))}
       </div>

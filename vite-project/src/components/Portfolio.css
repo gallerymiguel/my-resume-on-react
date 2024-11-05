@@ -1,12 +1,22 @@
 /* Portfolio.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure consistent sizing */
+}
+
 .portfolio-container {
     padding: 2rem;
     text-align: center; /* Center the text in the container */
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
   }
   
+
   .portfolio-header {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
+
   }
   
   .portfolio-grid {
@@ -20,16 +30,50 @@
     border: 1px solid #ccc; /* Optional border */
     border-radius: 8px; /* Rounded corners */
     overflow: hidden; /* Hide overflow */
-    text-align: center; /* Center the text */
+    height: 180px;
+    margin: 1px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align content */
+    border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  text-align: center;
+  
   }
   
   .portfolio-item img {
-    width: 100%; /* Full width for the image */
-    height: auto; /* Maintain aspect ratio */
     display: block; /* Ensure it behaves like a block element */
+    width: 120%; /* Make the image fit the width of the container */
+    height: 100px; /* Adjust as needed for the container's height */
+    object-fit: cover;
+    
   }
   
-  .portfolio-item h3 {
+  .portfolio-item h6 {
     margin: 0.5rem 0; /* Space above and below the title */
+      position: relative;
+      bottom: 50px;
+    
   }
+  .portfolio-item:hover {
+    filter: drop-shadow(0 0 1em #64d6ffaa);
+    border-color: #086346;
+  }
+
+
+  
+  .github-link {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+    position: relative;
+    bottom: 30%;
+    }
+  
+  .github-link:hover {
+    color: #f76a6a;
+  }
+  
   
