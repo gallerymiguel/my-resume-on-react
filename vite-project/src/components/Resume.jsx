@@ -8,7 +8,7 @@ const Resume = () => {
     <section className="resume-container">
       <div className="resume-header">
         <h2>My Resume</h2>
-        <a href="/path/to/your/resume.pdf" download className="resume-link">
+        <a href="/CodingResume.pdf" download className="resume-link">
           <button className="resume-btn">
             <FaFileDownload /> Download Resume
           </button>
