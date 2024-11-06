@@ -8,11 +8,12 @@
   max-width: 1000px;
   min-height: 400px; /* Control the width as needed */
   margin: auto;
-  margin-top: 180px;
+  margin-top: 10%;
   color: white; /* Change text color for contrast */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Optional: Add text shadow for readability */
 }
 body {
+  height: 100%;
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
   background-image: url('/3k.jpeg'); /* Path to your background image */
@@ -20,6 +21,8 @@ body {
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Prevent repeating the image */
   min-height: 100vh; /* Ensure body takes up full height of the viewport */
+  display: flex;
+    flex-direction: column;
 }
 
 .about-header {
@@ -47,4 +50,17 @@ body {
 
 p {
   font-size: large;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 5px;
+    font-size: 14px; /* Smaller font size for mobile */
+  }
 }

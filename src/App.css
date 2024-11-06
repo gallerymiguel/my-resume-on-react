@@ -1,6 +1,6 @@
 /* src/App.css */
 html, body {
-  height: 100%; /* Ensure full height for the container */
+  height: 2000px; 
   margin: 0;
   position: relative; /* Relative positioning to allow absolute footer */
   margin: 0; /* Remove default margin */
