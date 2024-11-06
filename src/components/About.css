@@ -62,5 +62,6 @@ p {
   .about-container {
     padding: 5px;
     font-size: 14px; /* Smaller font size for mobile */
+    margin-bottom: 200px;
   }
 }
