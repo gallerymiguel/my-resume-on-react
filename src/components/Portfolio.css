@@ -76,4 +76,15 @@
     color: #f76a6a;
   }
   
-  
+  @media (max-width: 768px) {
+    .portfolio-item {
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .portfolio-item {
+      padding: 5px;
+      font-size: 14px; /* Smaller font size for mobile */
+    }
+  }
