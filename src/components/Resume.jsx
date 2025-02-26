@@ -20,6 +20,7 @@ const Resume = () => {
           <h3>Front-End Development</h3>
           <ul>
             <li>HTML, CSS, and JavaScript</li>
+            <li>React.ts and Typescript</li>
             <li>React.js & JSX</li>
             <li>Responsive Web Design</li>
             <li>CSS Frameworks (Bootstrap, Tailwind CSS)</li>
@@ -36,7 +37,7 @@ const Resume = () => {
             <li>Database Management with PostgreSQL</li>
             <li>RESTful APIs</li>
             <li>Authentication (JWT, Passport.js)</li>
-            <li>Debugging and Testing with Mocha/Chai</li>
+            <li>Testing with Cypress</li>
           </ul>
         </div>
       </div>
