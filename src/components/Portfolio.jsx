@@ -63,6 +63,8 @@ const Portfolio = () => {
                   >
                     GitHub
                   </a>
+                  {/* Only show Live Site button if a live link exists */}
+                  {project.live && (
                   <a
                     href={project.live}
                     target="_blank"
@@ -71,6 +73,7 @@ const Portfolio = () => {
                   >
                     Live Site
                   </a>
+                  )}
                 </div>
               </div>
             </div>
