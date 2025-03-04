@@ -1,40 +1,92 @@
-// src/components/Portfolio.jsx
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import './Portfolio.css'; // Ensure you have this for styling
+import React, { useState } from "react";
+import "./Portfolio.css"; // Custom styling
+import ProjectModal from "./ProjectModal"; // Import the new modal component
+import projects from "../data/projects"; // Import project data
 
 const Portfolio = () => {
-  const projects = [
-    { id: 1, title: 'OpenAI-Weatherforecast', image: '/OpenAi.jpg', github: 'https://github.com/gallerymiguel/OpenAI-Weatherforecast' },
-    { id: 2, title: 'Readme Generator', image: '/markdown.jpg', github: 'https://github.com/gallerymiguel/readme-generator' },
-    { id: 3, title: 'Vehicle Builder CLI', image: '/Vehicle.jpg', github: 'https://github.com/gallerymiguel/Vehicle-Builder-CLI' },
-    { id: 4, title: 'Employee Manager PSQL-CLI', image: '/SQL.jpg', github: 'https://github.com/gallerymiguel/Employee-Manager-CLI' },
-    { id: 5, title: 'Temperature Converter', image: '/temperature.jpg', github: 'https://github.com/CelestialChai/temperature_converter' },
-    { id: 6, title: 'Weather App API', image: '/WeatherAPI', github: 'https://github.com/gallerymiguel/Weather-App-Challenge' },
+  const [selectedProject, setSelectedProject] = useState(null); // Store selected project
+  const [showModal, setShowModal] = useState(false); // Modal visibility
 
-  ];
+  // Handle project click
+  const handleProjectClick = (project) => {
+    setSelectedProject(project);
+    setShowModal(true);
+  };
+
+  // Handle modal close
+  const handleClose = () => {
+    setShowModal(false);
+    setSelectedProject(null);
+  };
 
   return (
-    <section className="portfolio-container">
-      <h2 className="portfolio-header">My Projects</h2>
-      <div className="portfolio-grid">
+    <section
+      className={`portfolio-container container ${showModal ? "blurred" : ""}`}
+    >
+      <h2 className="portfolio-header text-center my-4">My Projects</h2>
+      <div className="row">
         {projects.map((project) => (
-          <div key={project.id} className="portfolio-item">
-            <img src={project.image} alt={project.title} />
-            <h6>{project.title}</h6>
-            <a href={project.github} target="_blank" rel="noopener noreferrer" className="github-link">
-              <FontAwesomeIcon icon={faGithub} size="3x" />
-            </a>
+          <div key={project.id} className="col-md-4 mb-4">
+            <div className="card h-100 position-relative">
+              <div className="hover-icon">
+                <i className="fas fa-info-circle"></i>
+              </div>
+              {project.video ? (
+                <video
+                  className="card-img-top hover-effect"
+                  controls
+                  muted
+                  loop
+                  autoPlay
+                  playsInline
+                  onClick={() => handleProjectClick(project)}
+                >
+                  <source src={project.video} type="video/mp4" />
+                </video>
+              ) : (
+                <img
+                  src={project.image}
+                  className="card-img-top hover-effect"
+                  alt={project.title}
+                  onClick={() => handleProjectClick(project)}
+                />
+              )}
+
+              <div className="card-body d-flex flex-column">
+                <h5 className="card-title">{project.title}</h5>
+                <div className="mt-auto">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary me-2"
+                  >
+                    GitHub
+                  </a>
+                  {/* Only show Live Site button if a live link exists */}
+                  {project.live && (
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-success"
+                  >
+                    Live Site
+                  </a>
+                  )}
+                </div>
+              </div>
+            </div>
           </div>
         ))}
       </div>
-      <br />      
-      <br />
-      <br />
-      <br />
-      <br />
 
+      {/* Bootstrap Modal for Project Details */}
+      <ProjectModal
+        show={showModal}
+        handleClose={handleClose}
+        project={selectedProject}
+      />
     </section>
   );
 };

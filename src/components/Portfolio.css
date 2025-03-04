@@ -6,85 +6,118 @@
 }
 
 .portfolio-container {
-    padding: 2rem;
-    text-align: center; /* Center the text in the container */
-    color: white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
-  }
-  
+  padding: 2rem;
+  text-align: center; /* Center the text in the container */
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+}
 
-  .portfolio-header {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+.portfolio-header {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
 
-  }
-  
-  .portfolio-grid {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
-    gap: 1rem; /* Space between items */
-  }
-  
-  .portfolio-item {
-    background: rgba(255, 255, 255, 0.8); /* Light background with some opacity */
-    border: 1px solid #ccc; /* Optional border */
-    border-radius: 8px; /* Rounded corners */
-    overflow: hidden; /* Hide overflow */
-    height: 180px;
-    margin: 1px;
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center align content */
-    border: 1px solid #ddd;
+.portfolio-grid {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(150px, 1fr)
+  ); /* Responsive grid */
+  gap: 1rem; /* Space between items */
+}
+
+.portfolio-item {
+  background: rgba(255, 255, 255, 0.8); /* Light background with some opacity */
+  border: 1px solid #ccc; /* Optional border */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow */
+  height: 180px;
+  margin: 1px;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center align content */
+  border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
   background-color: #f9f9f9;
   text-align: center;
-  
-  }
-  
-  .portfolio-item img {
-    display: block; /* Ensure it behaves like a block element */
-    width: 120%; /* Make the image fit the width of the container */
-    height: 100px; /* Adjust as needed for the container's height */
-    object-fit: cover;
-    
-  }
-  
-  .portfolio-item h6 {
-    margin: 0.5rem 0; /* Space above and below the title */
-      position: relative;
-      bottom: 50px;
-    
-  }
-  .portfolio-item:hover {
-    filter: drop-shadow(0 0 1em #64d6ffaa);
-    border-color: #086346;
-  }
+}
+
+.portfolio-item img {
+  display: block; /* Ensure it behaves like a block element */
+  width: 120%; /* Make the image fit the width of the container */
+  height: 100px; /* Adjust as needed for the container's height */
+  object-fit: cover;
+}
+
+.portfolio-item h6 {
+  margin: 0.5rem 0; /* Space above and below the title */
+  position: relative;
+  bottom: 50px;
+}
+.portfolio-item:hover {
+  filter: drop-shadow(0 0 1em #64d6ffaa);
+  border-color: #086346;
+}
+
+.github-link {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s;
+  position: relative;
+  bottom: 30%;
+}
+
+.github-link:hover {
+  color: #f76a6a;
+}
+
+/* Hover icon effect */
+.hover-icon {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.position-relative:hover .hover-icon {
+  opacity: 1;
+}
+/* Hover effect styles */
+.hover-effect {
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.hover-effect:hover {
+  opacity: 0.7;
+}
 
 
-  
-  .github-link {
-    color: #000;
-    text-decoration: none;
-    transition: color 0.3s;
-    position: relative;
-    bottom: 30%;
-    }
-  
-  .github-link:hover {
-    color: #f76a6a;
-  }
-  
-  @media (max-width: 768px) {
-    .portfolio-item {
-      padding: 10px; /* Adjust padding for smaller screens */
-    }
-  }
+.position-relative:hover .hover-overlay {
+  opacity: 1;
+}
 
-  @media (max-width: 480px) {
-    .portfolio-item {
-      padding: 5px;
-      font-size: 14px; /* Smaller font size for mobile */
-    }
+
+/* Blur effect when modal is open */
+.blurred {
+  filter: blur(5px);
+  pointer-events: none; /* Prevent clicking background elements */
+}
+
+@media (max-width: 768px) {
+  .portfolio-item {
+    padding: 10px; /* Adjust padding for smaller screens */
   }
+}
+
+@media (max-width: 480px) {
+  .portfolio-item {
+    padding: 5px;
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+}
