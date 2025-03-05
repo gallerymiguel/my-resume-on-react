@@ -8,7 +8,7 @@ const Resume = () => {
     <section className="resume-container">
       <div className="resume-header">
         <h2>My Resume</h2>
-        <a href="/CodingResume.pdf" download className="resume-link">
+        <a href="/Miguel Urdiales - Frontend Developer Resume.pdf" download className="resume-link">
           <button className="resume-btn">
             <FaFileDownload /> Download Resume
           </button>
@@ -23,7 +23,7 @@ const Resume = () => {
             <li>React.ts and Typescript</li>
             <li>React.js & JSX</li>
             <li>Responsive Web Design</li>
-            <li>CSS Frameworks (Bootstrap, Tailwind CSS)</li>
+            <li>CSS Frameworks (Bootstrap, MUI)</li>
             <li>Version Control with Git</li>
             <li>UI/UX Design Principles</li>
           </ul>
@@ -38,6 +38,7 @@ const Resume = () => {
             <li>RESTful APIs</li>
             <li>Authentication (JWT, Passport.js)</li>
             <li>Testing with Cypress</li>
+            <li>Apollo GraphQL</li>
           </ul>
         </div>
       </div>
