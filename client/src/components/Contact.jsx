@@ -32,7 +32,7 @@ const Contact = () => {
     setStatus("Sending...");
   
     try {
-      const response = await fetch("https://my-resume-on-react-2.onrender.com/", { //Change this if you're using locally
+      const response = await fetch("https://my-resume-on-react-2.onrender.com/contact", { //Change this if you're using locally
 
         method: "POST",
         headers: {
