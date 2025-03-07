@@ -5,7 +5,19 @@ const cors = require("cors");
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: ["https://my-resume-on-react.onrender.com/contact", "https://my-resume-on-react-2.onrender.com/"], credentials: true }));
+app.use(
+  cors({
+    origin: "https://my-resume-on-react.onrender.com", // ✅ Allow your frontend URL
+    methods: ["POST", "GET"],
+    allowedHeaders: ["Content-Type"],
+  })
+);
+
+app.use((req, res, next) => {
+  console.log(`🔗 Request received: ${req.method} ${req.url}`);
+  next();
+});
+
 
 // Yahoo Email Transporter Setup
 const transporter = nodemailer.createTransport({
