@@ -18,6 +18,7 @@ app.use((req, res, next) => {
   next();
 });
 
+
 // Yahoo Email Transporter Setup
 const transporter = nodemailer.createTransport({
   service: "Yahoo",
