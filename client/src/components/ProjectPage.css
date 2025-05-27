@@ -1,0 +1,68 @@
+.glass-card {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border: 1px solid rgba(226, 226, 226, 0.3);
+  color: rgba(255, 255, 255, 0.829); /* Soft white */
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+line-height: 1.6;
+}
+
+.project-screenshot {
+  width: 100%;
+  aspect-ratio: 2/3; /* Or 4/3, adjust as you like */
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  transition: transform 0.3s ease;
+  
+}
+
+a:hover {
+  text-decoration: none;
+  color: #00ffff; /* Or any neon accent */
+  transition: color 0.3s ease;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to right, #00ffff, #ff00ff) 1;
+  padding-bottom: 4px;
+  text-align: center;
+}
+
+p {
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8); /* Soft white for better readability */
+  text-align: center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 2px);
+  background-size: 20px 20px;
+  pointer-events: none;
+  animation: shimmer 40s linear infinite;
+  z-index: -1;
+}
+
+@keyframes shimmer {
+  from { background-position: 0 0; }
+  to { background-position: 100% 100%; }
+}

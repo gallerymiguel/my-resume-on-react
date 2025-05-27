@@ -2,7 +2,7 @@
 .about-container {
   padding: 2rem;
   background-color: #343a40; /* Make the image cover the entire container */
-  opacity: 0.9; 
+  opacity: 0.9;
   backdrop-filter: blur(10000px);
   border-radius: 10px;
   max-width: 1000px;
@@ -16,13 +16,16 @@ body {
   height: 100%;
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
-  background-image: url('/3k.jpeg'); /* Path to your background image */
+  background-image: url("/3k.jpeg"); /* Path to your background image */
   background-size: cover; /* Make the image cover the entire viewport */
   background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent repeating the image */
+  background-attachment: fixed; /* Keep the background fixed during scroll */
   min-height: 100vh; /* Ensure body takes up full height of the viewport */
   display: flex;
-    flex-direction: column;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+
+
 }
 
 .about-header {
@@ -45,7 +48,7 @@ body {
 
 .about-text {
   text-align: center; /* Center align the text */
-  line-height: 1.6; 
+  line-height: 1.6;
 }
 
 p {
