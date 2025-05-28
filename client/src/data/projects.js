@@ -5,6 +5,7 @@ const projects = [
     slug: "after-action-review",
     image: "afteractionreview.png",
     github: "https://github.com/gallerymiguel/after_action_review",
+    demo_video: "/After_Actions_Promo.mp4",
     live: "https://after-action-review.onrender.com/",
     store: "",
     description:
@@ -24,8 +25,10 @@ const projects = [
       "jsPDF",
     ],
     images: [
-      "/assets/images/after-action-1.png",
-      "/assets/images/after-action-2.png",
+      { src: "/After_Actions_Screenshot1.png", aspect: "4/3" },
+      { src: "/After_Actions_Screenshot2.png", aspect: "4/3" },
+      { src: "/After_Actions_Screenshot3.png", aspect: "4/3" },
+      { src: "/After_Actions_Screenshot4.png", aspect: "4/3" }, 
     ],
   },
   {

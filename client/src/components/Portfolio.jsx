@@ -7,7 +7,7 @@ const Portfolio = () => {
   return (
     <main className="main-content">
       <section className="portfolio-container container">
-        <h2 className="portfolio-header text-center my-4">My Projects</h2>
+        <h2 className="portfolio-header text-center">My Projects</h2>
         <div className="row">
           {projects.map((project) => (
             <div key={project.id} className="col-md-4 mb-4">
