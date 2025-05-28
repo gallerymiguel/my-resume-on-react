@@ -24,3 +24,16 @@
 .social-icons a:hover {
   color: #007bff; /* Change color on hover */
 }
+
+
+@media (min-width: 1400px) {
+  .footer {
+    height: 10% !important;
+  }
+}
+
+@media (min-width: 2000px) {
+  .footer {
+    height: 8% !important;
+  }
+}
